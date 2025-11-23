@@ -1,304 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>uliecraft - Satu Tas, Satu Cerita</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>uliecraft - Satu Tas, Satu Cerita</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-    <body>
+    <style>
+        .top-bar {
+            background-color: #285151;
+            border-bottom: 2px solid #ffffff;
+        }
+        .navbar {
+            background-color: #D4E7E8;
+            border-bottom: 5px solid #ffffff;
+        }
+        .nav-link {
+            color: #285151 !important;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link.active {
+            font-weight: 600;
+        }
+    </style>
+</head>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-<div hidden> 
-<!-- Top Bar -->
-<div class="container-fluid px-3 px-lg-5 d-none d-lg-block" style="background-color: #285151; border-bottom: 2px solid #ffffff;">
-    <div class="row gx-0 align-items-center" style="height: 45px;">
-        <div class="col-12 text-center text-lg-start">
-            <span style="color: #285151;">Carry Your Story, Carry Your Style</span>
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
     </div>
-</div>
-</div>
+    <!-- Spinner End -->
 
 <!-- Main Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D4E7E8; border-bottom : 5px solid #ffffff">
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
     <div class="container-fluid px-3 px-lg-5">
+        <!-- Logo dan Menu Toggle -->
+        <div class="d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand me-4" href="index.html">
+                <img src="img/Ulie2.png" alt="Uliecraft Logo" class="navbar-logo">
+            </a>
 
-        <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
-            <img src="img/Ulie2.png" alt="Uliecraft Logo" style="height: 70px;">
-        </a>
-
-        <!-- Toggler Button (Mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars" style="color: #285151;"></span>
-        </button>
-
-        <!-- Navbar Links -->
+            <!-- Toggler Button (Mobile) -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+ <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="mainNavbar">
-            <!-- Center Menu -->
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+            <!-- Desktop Menu -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-menu">
                 <li class="nav-item">
-                    <a class="nav-link active" href="shop.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Shop</a>
+                    <a class="nav-link nav-link-custom active" href="index.html">
+                        <i class="fas fa-shopping-bag me-2 d-none d-sm-inline"></i>
+                        Home
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cheackout.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Checkout</a>
+                    <a class="nav-link nav-link-custom" href="shop.html">
+                        <i class="fas fa-info-circle me-2 d-none d-sm-inline"></i>
+                        Shop
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Contact</a>
+                    <a class="nav-link nav-link-custom" href="contact.html">
+                        <i class="fas fa-envelope me-2 d-none d-sm-inline"></i>
+                        Contact
+                    </a>
                 </li>
-                <!-- Mobile Dropdown -->
-            <!-- Search Bar & Icons -->
-            <div class="d-flex align-items-center gap-3 flex-wrap">
-                <!-- Search -->
-                <div class="d-flex border rounded-pill" style="border-color: #285151 !important; flex-grow: 1; max-width: 500px;">
-                    <input type="text" class="form-control border-0 rounded-pill py-2 px-3" placeholder="Search Looking For?" style="color: #285151; width: 100%;">
-                    <button type="button" class="btn rounded-pill py-2 px-3" style="background-color: #285151; color: #D4E7E8; border: 0;">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-
-                <!-- Icons -->
-                <div class="d-flex align-items-center gap-2">
-                    <a href="#" class="text-center text-decoration-none" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-random"></i></span>
-                    </a>
-                    <a href="#" class="text-center text-decoration-none" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-heart"></i></span>
-                    </a>
-                    <a href="#" class="text-center text-decoration-none d-flex align-items-center" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="ms-2" style="color:#285151;">Rp.0.00</span>
-                    </a>
-                </div>
+            </ul>
             </div>
-
         </div>
     </div>
 </nav>
-<!--Main Navbar End-->
+ <!-- Main Navbar End -->
 
-<!-- Uliecraft Carousel Start -->
-<div class="container-fluid carousel px-0" style="background-color: #D4E7E8;">
-    <div class="row g-0 justify-content-end">
 
-        <!-- Main Carousel -->
-        <div class="col-12 col-lg-7 col-xl-9">
-            <div class="header-carousel owl-carousel" style="background-color: #D4E7E8;">
+ 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Slide 1 -->
-                <div class="row g-0 header-carousel-item align-items-center">
-                    <div class="col-xl-6 carousel-img">
-                        <img src="img/framedpouchtoconvertwebp-removebg-preview.webp" class="img-fluid carousel-image" alt="Uliecraft Framed Pouch">
-                    </div>
-                    <div class="col-xl-6 carousel-content p-4">
-                        <h4 class="text-uppercase fw-bold mb-3 carousel-badge" 
-                            style="color: #285151; letter-spacing: 2px;">
-                            New Arrival
-                        </h4>
-
-                        <h1 class="carousel-title mb-3" style="color: #285151;">
-                            Handcrafted Canvas Bag Collection
-                        </h1>
-
-                        <p class="carousel-description" style="color: #285151;">Premium handmade essentials for your everyday story.</p>
-
-                        <a class="btn rounded-pill carousel-btn" 
-                           style="background-color: #285151; color: white;" href="#">
-                           Shop Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="row g-0 header-carousel-item align-items-center">
-                    <div class="col-xl-6 carousel-img">
-                        <img src="img/totebagcanvastoconvert-removebg-preview.webp" class="img-fluid carousel-image" alt="Uliecraft Tote Bag">
-                    </div>
-                    <div class="col-xl-6 carousel-content p-4">
-                        <h4 class="text-uppercase fw-bold mb-3 carousel-badge" 
-                            style="color: #285151; letter-spacing: 2px;">
-                            Best Seller
-                        </h4>
-
-                        <h1 class="carousel-title mb-3" style="color: #285151;">
-                            Seashell Canvas Bag
-                        </h1>
-
-                        <p class="carousel-description" style="color: #285151;">
-                            Your daily companion with spacious pockets & timeless design.
-                        </p>
-
-                        <a class="btn rounded-pill carousel-btn" 
-                           style="background-color: #285151; color: white;" href="#">
-                           Grab Yours
-                        </a>
-                    </div>
-                </div>
-
+<!-- About Us Section -->
+<div class="container-fluid py-5" style="background-color: #D4E7E8;">
+    <div class="container">
+        <!-- Header Section -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 mb-3 fw-bold" style="color: #285151;">Tentang Uliecraft</h2>
+                <div class="divider mx-auto mb-4" style="width: 80px; height: 4px; background-color: #285151;"></div>
+                <p class="lead mx-auto" style="color: #285151; max-width: 800px;">
+                    UMKM lokal asal Makassar yang menghadirkan keindahan Sulawesi Selatan melalui 
+                    tas, pouch, dan bros handmade berkualitas tinggi.
+                </p>
             </div>
         </div>
 
-        <!-- Side Banner -->
-        <div class="col-12 col-lg-5 col-xl-3">
-            <div class="carousel-header-banner h-100 position-relative">
-                <img src="img/coinpursetoconvert-removebg-preview.webp" class="img-fluid w-100 h-100 carousel-side-image" alt="Uliecraft Coin Purse">
+        <div class="row align-items-center g-5">
 
-                <!-- Offer Badge -->
-                <div class="position-absolute" style="top: 20px; left: 20px;">
-                    <p class="rounded fs-5 py-2 px-3 mb-0" 
-                       style="background-color: #285151; color: white;">
-                        Limited Stock
+            <!-- About Content -->
+            <div class="col-12 col-lg-6">
+                <div class="pe-lg-4 animate-fade-in">
+                    <p class="mb-4" style="color: #285151; font-size: 1.1rem; line-height: 1.7;">
+                        Uliecraft adalah UMKM lokal asal Makassar, Sulawesi Selatan yang mengkhususkan diri 
+                        dalam pembuatan tas, pouch, dan bros handmade berkualitas tinggi. Setiap produk 
+                        kami dibuat dengan penuh cinta dan perhatian terhadap detail, menggabungkan 
+                        keindahan tradisional dengan gaya kontemporer.
                     </p>
-                    <p class="fs-5 fw-bold mb-0" style="color: #285151;">Special Edition</p>
-                </div>
-
-                <!-- Banner Content -->
-                <div class="carousel-banner position-absolute bottom-0 w-100 text-center p-4" 
-                     style="background: rgba(40, 81, 81, 0.6);">
-
-                    <a href="#" class="d-block mb-2 banner-category" style="color: #D4E7E8;">Canvas Tote</a>
-
-                    <a href="#" class="d-block banner-title" style="color: white;">Uliecraft Daily Tote</a>
-
-                    <div class="banner-price">
-                        <del class="me-2 fs-5" style="color: #D4E7E8;">Rp 189.000</del>
-                        <span class="fs-5" style="color: #285151;">Rp 159.000</span>
+                    
+                    <!-- Features Grid -->
+                    <div class="row mb-4 g-3">
+                        <div class="col-12 col-sm-6">
+                            <div class="feature-card p-3 rounded d-flex align-items-center h-100">
+                                <span class="rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                      style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fas fa-hands" style="color: #D4E7E8;"></i>
+                                </span>
+                                <div>
+                                    <h5 style="color: #285151; margin-bottom: 0.3rem;">Handmade</h5>
+                                    <p class="mb-0 small" style="color: #285151;">Dibuat dengan tangan</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="feature-card p-3 rounded d-flex align-items-center h-100">
+                                <span class="rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                      style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fas fa-leaf" style="color: #D4E7E8;"></i>
+                                </span>
+                                <div>
+                                    <h5 style="color: #285151; margin-bottom: 0.3rem;">Eco-Friendly</h5>
+                                    <p class="mb-0 small" style="color: #285151;">Material ramah lingkungan</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="feature-card p-3 rounded d-flex align-items-center h-100">
+                                <span class="rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                      style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fas fa-heart" style="color: #D4E7E8;"></i>
+                                </span>
+                                <div>
+                                    <h5 style="color: #285151; margin-bottom: 0.3rem;">Lokal Pride</h5>
+                                    <p class="mb-0 small" style="color: #285151;">Kebanggaan Sulawesi Selatan</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="feature-card p-3 rounded d-flex align-items-center h-100">
+                                <span class="rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                      style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fas fa-award" style="color: #D4E7E8;"></i>
+                                </span>
+                                <div>
+                                    <h5 style="color: #285151; margin-bottom: 0.3rem;">Kualitas Premium</h5>
+                                    <p class="mb-0 small" style="color: #285151;">Bahan dan jahitan terbaik</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Vision & Mission -->
+                    <div class="mb-4">
+                        <h4 style="color: #285151;" class="mb-3">Visi & Misi</h4>
+                        <div class="vision-mission-card p-4 rounded mb-3" style="background-color: rgba(255, 255, 255, 0.5);">
+                            <h5 style="color: #285151;">Visi</h5>
+                            <p style="color: #285151; margin-bottom: 0;">
+                                Menjadi merek produk handmade terdepan yang menghadirkan 
+                                keindahan budaya Sulawesi Selatan dalam setiap karya.
+                            </p>
+                        </div>
+                        <div class="vision-mission-card p-4 rounded" style="background-color: rgba(255, 255, 255, 0.5);">
+                            <h5 style="color: #285151;">Misi</h5>
+                            <p style="color: #285151; margin-bottom: 0;">
+                                Menciptakan produk berkualitas tinggi yang tidak hanya 
+                                fungsional tetapi juga memiliki nilai seni dan cerita, sekaligus mendukung 
+                                perekonomian lokal Makassar.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <div class="text-center text-lg-start mt-4">
+                        <a href="contact.html" class="btn rounded-pill py-3 px-5 btn-hover" 
+                           style="background-color: #285151; color: white; font-weight: 600;">
+                            Hubungi Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                    <a href="#" class="btn rounded-pill py-2 px-4 mt-3 banner-btn" 
-                       style="background-color: #285151; color: white;">
-                        <i class="fas fa-shopping-cart me-2"></i> Add To Cart
-                    </a>
+            <!-- About Images -->
+            <div class="col-12 col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="position-relative overflow-hidden rounded image-hover" style="height: 280px;">
+                            <img src="img/framedpouchtoconvertwebp-removebg-preview.webp" 
+                                 class="img-fluid w-100 h-100 object-fit-cover" 
+                                 alt="Uliecraft Framed Pouch">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3 image-overlay">
+                                <h5 class="mb-0 text-white">Framed Pouch</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="position-relative overflow-hidden rounded image-hover" style="height: 280px;">
+                            <img src="img/totebagcanvastoconvert-removebg-preview.webp" 
+                                 class="img-fluid w-100 h-100 object-fit-cover" 
+                                 alt="Uliecraft Tote Bag">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3 image-overlay">
+                                <h5 class="mb-0 text-white">Canvas Tote Bag</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="position-relative overflow-hidden rounded image-hover" style="height: 250px;">
+                            <img src="img/coinpursetoconvert-removebg-preview.webp" 
+                                 class="img-fluid w-100 h-100 object-fit-cover" 
+                                 alt="Uliecraft Coin Purse">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3 image-overlay">
+                                <h5 class="mb-0 text-white">Coin Purse</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="position-relative overflow-hidden rounded image-hover h-100 d-flex align-items-center justify-content-center" 
+                             style="background: linear-gradient(135deg, #285151, #1a3a3a); min-height: 250px;">
+                            <div class="text-center p-4">
+                                <div class="year-badge mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center"
+                                     style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.2);">
+                                    <h3 class="text-white mb-0">2020</h3>
+                                </div>
+                                <h4 class="text-white mb-2">Sejak 2020</h4>
+                                <p class="text-white mb-0 small">Melayani dengan penuh cinta dari Makassar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Values Section -->
+        <div class="row mt-5 pt-5">
+            <div class="col-12 text-center mb-5">
+                <h2 style="color: #285151;">Nilai-Nilai Uliecraft</h2>
+                <div class="divider mx-auto mb-4" style="width: 80px; height: 4px; background-color: #285151;"></div>
+                <p class="mx-auto" style="color: #285151; max-width: 600px;">
+                    Dalam setiap produk yang kami buat, kami selalu mengedepankan nilai-nilai 
+                    yang menjadi fondasi Uliecraft
+                </p>
+            </div>
+            
+            <div class="col-12 col-md-4 mb-4">
+                <div class="text-center p-4 h-100 rounded value-card">
+                    <span class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3 icon-hover" 
+                          style="width: 80px; height: 80px; background-color: #285151; transition: all 0.3s;">
+                        <i class="fas fa-hand-holding-heart fa-lg" style="color: #D4E7E8;"></i>
+                    </span>
+                    <h4 style="color: #285151;">Kerajinan Tangan</h4>
+                    <p style="color: #285151;">
+                        Setiap produk dibuat dengan tangan oleh pengrajin lokal Makassar yang 
+                        berpengalaman, menjamin kualitas dan keunikan setiap item.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 mb-4">
+                <div class="text-center p-4 h-100 rounded value-card">
+                    <span class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3 icon-hover" 
+                          style="width: 80px; height: 80px; background-color: #285151; transition: all 0.3s;">
+                        <i class="fas fa-palette fa-lg" style="color: #D4E7E8;"></i>
+                    </span>
+                    <h4 style="color: #285151;">Desain Eksklusif</h4>
+                    <p style="color: #285151;">
+                        Menggabungkan estetika modern dengan sentuhan khas Sulawesi Selatan, 
+                        menciptakan produk yang stylish dan bermakna.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 mb-4">
+                <div class="text-center p-4 h-100 rounded value-card">
+                    <span class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3 icon-hover" 
+                          style="width: 80px; height: 80px; background-color: #285151; transition: all 0.3s;">
+                        <i class="fas fa-users fa-lg" style="color: #D4E7E8;"></i>
+                    </span>
+                    <h4 style="color: #285151;">Komunitas Lokal</h4>
+                    <p style="color: #285151;">
+                        Kami bangga mendukung perekonomian lokal dengan memberdayakan pengrajin 
+                        dan menggunakan bahan baku berkualitas dari Indonesia.
+                    </p>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-<!-- Uliecraft Carousel End -->
-
-
+<!-- About Us Section End -->
 
        <!-- Services Start -->
+<!-- Services Start -->
 <div class="container-fluid px-0" style="background-color: hsl(180, 32%, 59%);">
     <div class="row g-0">
 
-        <!-- Item 1 -->
+        <!-- Item 1: Custom Order -->
         <div class="col-6 col-md-4 col-lg-2 border-start border-end wow fadeInUp" data-wow-delay="0.1s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-sync-alt fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Free Return
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">30 days money back guarantee</p>
-                    </div>
+            <div class="p-4 h-100">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <i class="fas fa-palette fa-2x mb-3" style="color: #285151;"></i>
+                    <h6 class="text-uppercase mb-2" style="color: #285151; font-weight:600;">
+                        Custom Order
+                    </h6>
+                    <p class="mb-0 small" style="color: #285151;">Desain sesuai permintaan Anda</p>
                 </div>
             </div>
         </div>
 
-        <!-- Item 2 -->
+        <!-- Item 2: Bulk Order -->
         <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.2s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fab fa-telegram-plane fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Free Shipping
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">On all orders</p>
-                    </div>
+            <div class="p-4 h-100">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <i class="fas fa-boxes fa-2x mb-3" style="color: #285151;"></i>
+                    <h6 class="text-uppercase mb-2" style="color: #285151; font-weight:600;">
+                        Pesanan Partai
+                    </h6>
+                    <p class="mb-0 small" style="color: #285151;">Beli banyak harga lebih hemat</p>
                 </div>
             </div>
         </div>
 
-        <!-- Item 3 -->
+        <!-- Item 3: Souvenir -->
         <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.3s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-life-ring fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Support 24/7
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Online support all day</p>
-                    </div>
+            <div class="p-4 h-100">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <i class="fas fa-gift fa-2x mb-3" style="color: #285151;"></i>
+                    <h6 class="text-uppercase mb-2" style="color: #285151; font-weight:600;">
+                        Cendramata
+                    </h6>
+                    <p class="mb-0 small" style="color: #285151;">Perfect untuk hadiah & souvenir</p>
                 </div>
             </div>
         </div>
 
-        <!-- Item 4 -->
+        <!-- Item 4: Handmade -->
         <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.4s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-credit-card fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Gift Cards
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Available for any purchase</p>
-                    </div>
+            <div class="p-4 h-100">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <i class="fas fa-hands fa-2x mb-3" style="color: #285151;"></i>
+                    <h6 class="text-uppercase mb-2" style="color: #285151; font-weight:600;">
+                        Handmade
+                    </h6>
+                    <p class="mb-0 small" style="color: #285151;">Dibuat dengan penuh cinta</p>
                 </div>
             </div>
         </div>
 
-        <!-- Item 5 -->
+        <!-- Item 5: Local Product -->
         <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.5s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-lock fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Secure Payment
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Your security matters</p>
-                    </div>
+            <div class="p-4 h-100">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <i class="fas fa-map-marker-alt fa-2x mb-3" style="color: #285151;"></i>
+                    <h6 class="text-uppercase mb-2" style="color: #285151; font-weight:600;">
+                        Produk Lokal
+                    </h6>
+                    <p class="mb-0 small" style="color: #285151;">Kebanggaan Makassar</p>
                 </div>
             </div>
         </div>
 
-        <!-- Item 6 -->
+        <!-- Item 6: Quality Materials -->
         <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.6s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-blog fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Online Service
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Easy & fast assistance</p>
-                    </div>
+            <div class="p-4 h-100">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <i class="fas fa-award fa-2x mb-3" style="color: #285151;"></i>
+                    <h6 class="text-uppercase mb-2" style="color: #285151; font-weight:600;">
+                        Bahan Premium
+                    </h6>
+                    <p class="mb-0 small" style="color: #285151;">Kualitas terjamin & tahan lama</p>
                 </div>
             </div>
         </div>
@@ -306,72 +418,6 @@
     </div>
 </div>
 <!-- Services End -->
-
-       <!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-
-            <!-- About Images -->
-            <div class="col-lg-6">
-                <div class="row g-3">
-                    <div class="col-6 text-end">
-                        <img class="img-fluid w-100 mb-3 rounded wow fadeIn" data-wow-delay="0.1s" src="img/tas-jeans.webp" alt="">
-                        <img class="img-fluid w-50 rounded wow fadeIn" data-wow-delay="0.2s" src="img/totebagcanvas.webp" alt="">
-                    </div>
-                    <div class="col-6">
-                        <img class="img-fluid w-50 mb-3 rounded wow fadeIn" data-wow-delay="0.3s" src="img/tas3.webp" alt="">
-                        <img class="img-fluid w-100 rounded wow fadeIn" data-wow-delay="0.4s" src="img/tas2.webp" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <!-- About Content -->
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <div class="section-title">
-                    <p class="fs-5 fw-medium fst-italic" style="color: #285151;">
-                        About Us
-                    </p>
-                    <h1 class="display-6" style="color: #285151;">
-                        Handcrafted Bags for Your Everyday Story
-                    </h1>
-                </div>
-
-                <div class="row g-3 mb-4">
-                    <div class="col-sm-4">
-                        <img class="img-fluid w-100 rounded" src="img/ulie-about-small-1.jpg" alt="">
-                    </div>
-                    <div class="col-sm-8">
-                        <h5 style="color:#285151;">Crafted with Purpose</h5>
-                        <p class="mb-0" style="color:#3D3B37;">
-                            Setiap produk Uliecraft dibuat dengan ketelitian tangan,
-                            memastikan kualitas yang tahan lama dan desain yang timeless
-                            untuk menemani aktivitasmu setiap hari.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="border-top mb-4" style="border-color: #9F9F9F;"></div>
-
-                <div class="row g-3">
-                    <div class="col-sm-8">
-                        <h5 style="color:#285151;">Designed for Real Life</h5>
-                        <p class="mb-0" style="color:#3D3B37;">
-                            Dari kompartemen luas hingga material yang kuat,
-                            setiap tas dibuat untuk membawa ceritamu —
-                            dari rutinitas harian hingga momen perjalanan.
-                        </p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img class="img-fluid w-100 rounded" src="img/ulie-about-small-2.jpg" alt="">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
 
     <!-- Bestseller Products Start -->
 <div class="container-fluid products pb-5">
@@ -608,104 +654,90 @@
 <!-- Testimonial End -->
 </div>
 
+<!-- Footer Links -->
+<div class="row g-5">
+    <!-- Social Media Icons -->
+    <div class="col-12 text-center mt-4">
+        <div class="d-flex justify-content-center gap-3">
 
-     <!-- Footer Start -->
-<div class="container-fluid py-5" style="background:#285151;">
-    <div class="container py-5">
+            <!-- Instagram -->
+            <a href="https://instagram.com/uliecraft" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-instagram" style="color:#285151; font-size:20px;"></i>
+            </a>
 
-        <!-- 4 Icon Boxes -->
-        <div class="row g-4 rounded mb-5" style="background: rgba(212, 231, 232, 0.07);">
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="rounded p-4">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
-                        style="width: 70px; height: 70px; background:#D4E7E8;">
-                        <i class="fas fa-map-marker-alt fa-2x" style="color:#285151;"></i>
-                    </div>
-                    <h4 class="text-white">Address</h4>
-                    <p class="mb-2" style="color:#D4E7E8;">123 Street New York. USA</p>
-                </div>
-            </div>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6289516033586" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-whatsapp" style="color:#285151; font-size:20px;"></i>
+            </a>
 
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="rounded p-4">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
-                        style="width: 70px; height: 70px; background:#D4E7E8;">
-                        <i class="fas fa-envelope fa-2x" style="color:#285151;"></i>
-                    </div>
-                    <h4 class="text-white">Mail Us</h4>
-                    <p class="mb-2" style="color:#D4E7E8;">info@example.com</p>
-                </div>
-            </div>
+            <!-- Google Maps -->
+            <a href="https://maps.google.com/?q=Makassar,Sulawesi+Selatan,Indonesia" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fas fa-map-marked-alt" style="color:#285151; font-size:20px;"></i>
+            </a>
 
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="rounded p-4">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
-                        style="width: 70px; height: 70px; background:#D4E7E8;">
-                        <i class="fa fa-phone-alt fa-2x" style="color:#285151;"></i>
-                    </div>
-                    <h4 class="text-white">Telephone</h4>
-                    <p class="mb-2" style="color:#D4E7E8;">(+012) 3456 7890</p>
-                </div>
-            </div>
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@uliecraft" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-tiktok" style="color:#285151; font-size:20px;"></i>
+            </a>
 
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="rounded p-4">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
-                        style="width: 70px; height: 70px; background:#D4E7E8;">
-                        <i class="fab fa-firefox-browser fa-2x" style="color:#285151;"></i>
-                    </div>
-                    <h4 class="text-white">Yoursite@ex.com</h4>
-                    <p class="mb-2" style="color:#D4E7E8;">(+012) 3456 7890</p>
-                </div>
+            <!-- Email -->
+            <a href="mailto:uliecraft@gmail.com"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fas fa-envelope" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+        </div>
+
+
+ <!-- Contact Info Horizontal - Simple Version -->
+<div class="mt-4">
+    <div class="contact-horizontal d-flex justify-content-center align-items-center flex-wrap gap-4 p-4 rounded" 
+         style="background: rgba(255, 255, 255, 0.3); border: 2px solid rgba(40, 81, 81, 0.2);">
+        
+        <!-- Phone -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-phone-alt me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Telepon:</span>
+                <span style="color: #285151;" class="ms-1">+62 895-1603-3586</span>
             </div>
         </div>
 
-        <!-- Footer Links -->
-        <div class="row g-5">
-            <!-- Social Media Icons -->
-<div class="col-12 text-center mt-4">
-    <div class="d-flex justify-content-center gap-3">
+        <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
 
-        <!-- Instagram -->
-        <a href="#" target="_blank"
-            class="d-flex align-items-center justify-content-center"
-            style="width:45px; height:45px; background:#D4E7E8; border-radius:50%;">
-            <i class="fab fa-instagram" style="color:#285151; font-size:20px;"></i>
-        </a>
+        <!-- Location -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-map-marker-alt me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Lokasi:</span>
+                <span style="color: #285151;" class="ms-1">Makassar, Sulawesi Selatan</span>
+            </div>
+        </div>
 
-        <!-- WhatsApp -->
-        <a href="#" target="_blank"
-            class="d-flex align-items-center justify-content-center"
-            style="width:45px; height:45px; background:#D4E7E8; border-radius:50%;">
-            <i class="fab fa-whatsapp" style="color:#285151; font-size:20px;"></i>
-        </a>
+        <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
 
-        <!-- Google Maps -->
-        <a href="#" target="_blank"
-            class="d-flex align-items-center justify-content-center"
-            style="width:45px; height:45px; background:#D4E7E8; border-radius:50%;">
-            <i class="fas fa-map-marked-alt" style="color:#285151; font-size:20px;"></i>
-        </a>
+        <!-- Hours -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-clock me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Jam:</span>
+                <span style="color: #285151;" class="ms-1">09.00 - 17.00 WITA</span>
+            </div>
+        </div>
 
     </div>
 </div>
-
-
+<!---Contact Info Horizontal End-->
 <!-- Footer End -->
-
-
-.footer-link {
-    color: #D4E7E8;
-    text-decoration: none;
-    margin-bottom: 6px;
-    display: block;
-}
-.footer-link:hover {
-    color: #ffffff;
-    margin-left: 3px;
-    transition: 0.2s ease;
-}
-
 
 
         

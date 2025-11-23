@@ -1,398 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Electro - Electronics Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+  <head>
+    <meta charset="utf-8">
+    <title>uliecraft - Satu Tas, Satu Cerita</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-    <body>
+    <style>
+        .top-bar {
+            background-color: #285151;
+            border-bottom: 2px solid #ffffff;
+        }
+        .navbar {
+            background-color: #D4E7E8;
+            border-bottom: 5px solid #ffffff;
+        }
+        .nav-link {
+            color: #285151 !important;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link.active {
+            font-weight: 600;
+        }
+    </style>
+</head>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+<body>
 
-
-      <!-- Top Bar -->
-<div class="container-fluid px-3 px-lg-5 d-none d-lg-block" style="background-color: #285151; border-bottom: 2px solid #ffffff;">
-    <div class="row gx-0 align-items-center" style="height: 45px;">
-        <div class="col-12 text-center text-lg-start">
-            <span style="color: #285151;">Carry Your Story, Carry Your Style</span>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
     </div>
-</div>
-</div>
+    <!-- Spinner End -->
 
-<!-- Main Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D4E7E8; border-bottom : 5px solid #ffffff">
+ <!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
     <div class="container-fluid px-3 px-lg-5">
+        <!-- Logo dan Menu Toggle -->
+        <div class="d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand me-4" href="index.html">
+                <img src="img/Ulie2.png" alt="Uliecraft Logo" class="navbar-logo">
+            </a>
 
-        <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
-            <img src="img/Ulie2.png" alt="Uliecraft Logo" style="height: 70px;">
-        </a>
-
-        <!-- Toggler Button (Mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars" style="color: #285151;"></span>
-        </button>
-
-        <!-- Navbar Links -->
+            <!-- Toggler Button (Mobile) -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+ <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="mainNavbar">
-            <!-- Center Menu -->
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+            <!-- Desktop Menu -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-menu">
                 <li class="nav-item">
-                    <a class="nav-link active" href="shop.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Shop</a>
+                    <a class="nav-link nav-link-custom" href="index.html">
+                        <i class="fas fa-shopping-bag me-2 d-none d-sm-inline"></i>
+                        Home
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cheackout.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Checkout</a>
+                    <a class="nav-link nav-link-custom active" href="shop.html">
+                        <i class="fas fa-info-circle me-2 d-none d-sm-inline"></i>
+                        Shop
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Contact</a>
+                    <a class="nav-link nav-link-custom" href="contact.html">
+                        <i class="fas fa-envelope me-2 d-none d-sm-inline"></i>
+                        Contact
+                    </a>
                 </li>
-                <!-- Mobile Dropdown -->
-            <!-- Search Bar & Icons -->
-            <div class="d-flex align-items-center gap-3 flex-wrap">
-                <!-- Search -->
-                <div class="d-flex border rounded-pill" style="border-color: #285151 !important; flex-grow: 1; max-width: 500px;">
-                    <input type="text" class="form-control border-0 rounded-pill py-2 px-3" placeholder="Search Looking For?" style="color: #285151; width: 100%;">
-                    <button type="button" class="btn rounded-pill py-2 px-3" style="background-color: #285151; color: #D4E7E8; border: 0;">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-
-                <!-- Icons -->
-                <div class="d-flex align-items-center gap-2">
-                    <a href="#" class="text-center text-decoration-none" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-random"></i></span>
-                    </a>
-                    <a href="#" class="text-center text-decoration-none" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-heart"></i></span>
-                    </a>
-                    <a href="#" class="text-center text-decoration-none d-flex align-items-center" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="ms-2" style="color:#285151;">Rp.0.00</span>
-                    </a>
-                </div>
+            </ul>
             </div>
-
         </div>
     </div>
 </nav>
-<!--Main Navbar End-->
-<!-- Shop Header Start -->
-<div class="container-fluid shop-header py-5">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                <!-- Main Title -->
-                <h1 class="text-white display-5 fw-bold mb-3 wow fadeInUp" data-wow-delay="0.1s">
-                    Koleksi Eksklusif Uliecraft
-                </h1>
-                
-                <!-- Subtitle with encouragement -->
-                <p class="lead text-white mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                    Temukan teman setia harianmu dengan tas kanvas handmade yang penuh cerita
-                </p>
+ <!-- Main Navbar End -->
 
-                <!-- Features Highlights -->
-                <div class="features-highlights row g-3 justify-content-center mb-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-auto">
-                        <div class="feature-badge">
-                            <i class="fas fa-shipping-fast me-2"></i>
-                            <span>Gratis Ongkir</span>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <div class="feature-badge">
-                            <i class="fas fa-undo me-2"></i>
-                            <span>Garansi 30 Hari</span>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <div class="feature-badge">
-                            <i class="fas fa-hand-holding-heart me-2"></i>
-                            <span>Handmade</span>
-                        </div>
-                    </div>
-                </div>
+ 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Special Offer -->
-                <div class="special-offer wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="offer-badge p-3 rounded">
-                        <span class="badge-text">🛍️ Special Offer: </span>
-                        <span class="offer-details">Beli 2 produk, gratis 1 pouch limited edition!</span>
-                    </div>
-                </div>
-
-                <!-- Scroll Indicator -->
-                <div class="scroll-indicator mt-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <small class="text-white me-2">Jelajahi koleksi kami</small>
-                        <i class="fas fa-chevron-down text-white" style="animation: bounce 2s infinite;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Shop Header End -->
-
-      
        
        <!-- Minimal Shop Page Start -->
 <div class="container-fluid shop py-5">
     <div class="container py-5">
-        <!-- Search and Sort Section -->
-        <div class="row g-4 mb-4">
-            <div class="col-xl-8">
-                <div class="input-group w-100 mx-auto d-flex">
-                    <input type="search" class="form-control p-3" placeholder="Cari produk Uliecraft..." aria-describedby="search-icon-1">
-                    <span id="search-icon-1" class="input-group-text p-3" style="background: #285151; color: white; border-color: #285151;">
-                        <i class="fa fa-search"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="col-xl-4 text-end">
-                <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between">
-                    <label for="sort" class="my-auto" style="color: #285151;">Urutkan:</label>
-                    <select id="sort" name="sort" class="border-0 form-select-sm bg-light me-3" style="color: #285151;">
-                        <option value="default">Default</option>
-                        <option value="popularity">Terpopuler</option>
-                        <option value="newness">Terbaru</option>
-                        <option value="price-low">Harga: Rendah ke Tinggi</option>
-                        <option value="price-high">Harga: Tinggi ke Rendah</option>
-                    </select>
-                </div>
-            </div>
-        </div>
 
         <!-- Products Grid -->
         <div class="row g-4 product">
-            <!-- Product 1 - Jeans Bag -->
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="product-item rounded wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="product-item-inner border rounded" style="border-color: #e9ecef !important;">
-                        <div class="product-item-inner-item position-relative">
-                            <img src="img/tas-jeans.webp" class="img-fluid w-100 rounded-top" alt="Re-Cycle Jeans Bag" style="height: 250px; object-fit: cover;">
-                            <div class="product-new" style="background: #FF6B6B;">New</div>
-                            <div class="product-details">
-                                <a href="#"><i class="fa fa-eye fa-1x text-white"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center rounded-bottom p-4">
-                            <a href="#" class="d-block mb-2 text-muted">Jeans Bag</a>
-                            <a href="#" class="d-block h5 mb-3" style="color: #285151;">Re-Cycle Jeans Bag</a>
-                            <div class="price-section">
-                                <del class="me-2 fs-6 text-muted">Rp 189.000</del>
-                                <span class="fs-5 fw-bold" style="color: #285151;">Rp 159.000</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-add border border-top-0 rounded-bottom text-center p-4 pt-0">
-                        <a href="#" class="btn rounded-pill py-2 px-4 mb-3" style="background: #285151; color: white; border: none;">
-                            <i class="fas fa-shopping-cart me-2"></i> Add To Cart
-                        </a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #e9ecef;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <a href="#" class="d-flex align-items-center justify-content-center me-3">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-random"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="d-flex align-items-center justify-content-center me-0">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-heart"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<!-- Product 1 - Jeans Bag -->
+<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+    <div class="product-card rounded wow fadeInUp" data-wow-delay="0.1s">
+        <div class="product-card-inner border-0 rounded shadow-sm">
+            <!-- Product Image with Badge -->
+            <div class="product-image-container position-relative overflow-hidden">
+                <a href="jeansbag.html" class="d-block">
+                    <img src="img/tas-jeans.webp" class="img-fluid w-100 product-image" alt="Re-Cycle Jeans Bag" style="height: 250px; object-fit: cover;">
+                </a>
+                <div class="product-badge position-absolute top-0 start-0 m-2 px-2 py-1 rounded" style="background: #FF6B6B; color: white; font-size: 0.8rem; font-weight: 600;">
+                    New
+                </div>
+                <!-- Eye Icon for Quick View -->
+                <div class="product-quick-view position-absolute top-0 end-0 m-2">
+                    <a href="jeansbag.html" class="quick-view-btn d-flex align-items-center justify-content-center rounded-circle">
+                        <i class="fa fa-eye fa-sm text-white"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Product 2 - Framed Pouch -->
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="product-item rounded wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="product-item-inner border rounded" style="border-color: #e9ecef !important;">
-                        <div class="product-item-inner-item position-relative">
-                            <img src="img/framedpouch.webp" class="img-fluid w-100 rounded-top" alt="Framed Pouch" style="height: 250px; object-fit: cover;">
-                            <div class="product-new" style="background: #285151;">Bestseller</div>
-                            <div class="product-details">
-                                <a href="#"><i class="fa fa-eye fa-1x text-white"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center rounded-bottom p-4">
-                            <a href="#" class="d-block mb-2 text-muted">Pouch</a>
-                            <a href="#" class="d-block h5 mb-3" style="color: #285151;">Framed Pouch</a>
-                            <div class="price-section">
-                                <del class="me-2 fs-6 text-muted">Rp 189.000</del>
-                                <span class="fs-5 fw-bold" style="color: #285151;">Rp 159.000</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-add border border-top-0 rounded-bottom text-center p-4 pt-0">
-                        <a href="#" class="btn rounded-pill py-2 px-4 mb-3" style="background: #285151; color: white; border: none;">
-                            <i class="fas fa-shopping-cart me-2"></i> Add To Cart
-                        </a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <a href="#" class="d-flex align-items-center justify-content-center me-3">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-random"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="d-flex align-items-center justify-content-center me-0">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-heart"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+            <!-- Product Info -->
+            <div class="product-info p-3">
+                <div class="product-category mb-1">
+                    <span class="text-muted small">Jeans Bag</span>
+                </div>
+                <a href="jeansbag.html" class="d-block text-decoration-none">
+                    <h5 class="product-title mb-2" style="color: #285151; font-weight: 600;">Re-Cycle Jeans Bag</h5>
+                </a>
+                
+                <!-- Price Section -->
+                <div class="price-section mb-3">
+                    <del class="me-2 text-muted small">Rp 189.000</del>
+                    <span class="fw-bold fs-5" style="color: #285151;">Rp 159.000</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="product-rating mb-3">
+                    <div class="d-flex justify-content-center">
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #e9ecef;"></i>
+                        <span class="ms-2 text-muted small">(18)</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Product 3 - Sling Bag -->
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="product-item rounded wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="product-item-inner border rounded" style="border-color: #e9ecef !important;">
-                        <div class="product-item-inner-item position-relative">
-                            <img src="img/Tas4.webp" class="img-fluid w-100 rounded-top" alt="Sling Bag" style="height: 250px; object-fit: cover;">
-                            <div class="product-new" style="background: #FF6B6B;">New</div>
-                            <div class="product-details">
-                                <a href="#"><i class="fa fa-eye fa-1x text-white"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center rounded-bottom p-4">
-                            <a href="#" class="d-block mb-2 text-muted">Bag</a>
-                            <a href="#" class="d-block h5 mb-3" style="color: #285151;">Sling Bag</a>
-                            <div class="price-section">
-                                <del class="me-2 fs-6 text-muted">Rp 219.000</del>
-                                <span class="fs-5 fw-bold" style="color: #285151;">Rp 189.000</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-add border border-top-0 rounded-bottom text-center p-4 pt-0">
-                        <a href="#" class="btn rounded-pill py-2 px-4 mb-3" style="background: #285151; color: white; border: none;">
-                            <i class="fas fa-shopping-cart me-2"></i> Add To Cart
-                        </a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #e9ecef;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <a href="#" class="d-flex align-items-center justify-content-center me-3">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-random"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="d-flex align-items-center justify-content-center me-0">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-heart"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+</div>
+<!-- Product 2 - Framed Pouch -->
+<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+    <div class="product-card rounded wow fadeInUp" data-wow-delay="0.2s">
+        <div class="product-card-inner border-0 rounded shadow-sm">
+            <!-- Product Image with Badge -->
+            <div class="product-image-container position-relative overflow-hidden">
+                <img src="img/framedpouch.webp" class="img-fluid w-100 product-image" alt="Framed Pouch" style="height: 250px; object-fit: cover;">
+                <div class="product-badge position-absolute top-0 start-0 m-2 px-2 py-1 rounded" style="background: #285151; color: white; font-size: 0.8rem; font-weight: 600;">
+                    Bestseller
                 </div>
             </div>
 
-            <!-- Product 4 - Framed Bag -->
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="product-item rounded wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="product-item-inner border rounded" style="border-color: #e9ecef !important;">
-                        <div class="product-item-inner-item position-relative">
-                            <img src="img/tas2.webp" class="img-fluid w-100 rounded-top" alt="Framed Bag" style="height: 250px; object-fit: cover;">
-                            <div class="product-new" style="background: #285151;">Limited</div>
-                            <div class="product-details">
-                                <a href="#"><i class="fa fa-eye fa-1x text-white"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center rounded-bottom p-4">
-                            <a href="#" class="d-block mb-2 text-muted">Bag</a>
-                            <a href="#" class="d-block h5 mb-3" style="color: #285151;">Framed Bag</a>
-                            <div class="price-section">
-                                <del class="me-2 fs-6 text-muted">Rp 239.000</del>
-                                <span class="fs-5 fw-bold" style="color: #285151;">Rp 199.000</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item-add border border-top-0 rounded-bottom text-center p-4 pt-0">
-                        <a href="#" class="btn rounded-pill py-2 px-4 mb-3" style="background: #285151; color: white; border: none;">
-                            <i class="fas fa-shopping-cart me-2"></i> Add To Cart
-                        </a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                                <i class="fas fa-star" style="color: #FFD700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <a href="#" class="d-flex align-items-center justify-content-center me-3">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-random"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="d-flex align-items-center justify-content-center me-0">
-                                    <span class="rounded-circle btn-sm-square border d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; border-color: #285151 !important; color: #285151;">
-                                        <i class="fas fa-heart"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+            <!-- Product Info -->
+            <div class="product-info p-3">
+                <div class="product-category mb-1">
+                    <span class="text-muted small">Pouch</span>
+                </div>
+                <h5 class="product-title mb-2" style="color: #285151; font-weight: 600;">Framed Pouch</h5>
+                
+                <!-- Price Section -->
+                <div class="price-section mb-3">
+                    <del class="me-2 text-muted small">Rp 189.000</del>
+                    <span class="fw-bold fs-5" style="color: #285151;">Rp 159.000</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="product-rating mb-3">
+                    <div class="d-flex justify-content-center">
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <span class="ms-2 text-muted small">(28)</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
-            <!-- Add more products here as needed -->
+<!-- Product 2 - Framed Pouch -->
+<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+    <div class="product-card rounded wow fadeInUp" data-wow-delay="0.2s">
+        <div class="product-card-inner border-0 rounded shadow-sm">
+            <!-- Product Image with Badge -->
+            <div class="product-image-container position-relative overflow-hidden">
+                <a href="framedpouch.html" class="d-block product-image-link">
+                    <img src="img/framedpouch.webp" class="img-fluid w-100 product-image" alt="Framed Pouch" style="height: 250px; object-fit: cover;">
+                </a>
+                <div class="product-badge position-absolute top-0 start-0 m-2 px-2 py-1 rounded" style="background: #285151; color: white; font-size: 0.8rem; font-weight: 600;">
+                    Bestseller
+                </div>
+                <!-- Eye Icon for Quick View -->
+                <div class="product-quick-view position-absolute top-0 end-0 m-2">
+                    <a href="framedpouch.html" class="quick-view-btn d-flex align-items-center justify-content-center rounded-circle">
+                        <i class="fa fa-eye fa-sm text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info p-3">
+                <div class="product-category mb-1">
+                    <a href="framedpouch.html" class="text-muted small text-decoration-none">Pouch</a>
+                </div>
+                <a href="framedpouch.html" class="text-decoration-none">
+                    <h5 class="product-title mb-2" style="color: #285151; font-weight: 600;">Framed Pouch</h5>
+                </a>
+                
+                <!-- Price Section -->
+                <div class="price-section mb-3">
+                    <del class="me-2 text-muted small">Rp 189.000</del>
+                    <span class="fw-bold fs-5" style="color: #285151;">Rp 159.000</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="product-rating mb-3">
+                    <div class="d-flex justify-content-center">
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <span class="ms-2 text-muted small">(28)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product 4 - Framed Bag -->
+<div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+    <div class="product-card rounded wow fadeInUp" data-wow-delay="0.4s">
+        <div class="product-card-inner border-0 rounded shadow-sm">
+            <!-- Product Image with Badge -->
+            <div class="product-image-container position-relative overflow-hidden">
+                <a href="framedbag.html" class="d-block product-image-link">
+                    <img src="img/tas2.webp" class="img-fluid w-100 product-image" alt="Framed Bag" style="height: 250px; object-fit: cover;">
+                </a>
+                <div class="product-badge position-absolute top-0 start-0 m-2 px-2 py-1 rounded" style="background: #285151; color: white; font-size: 0.8rem; font-weight: 600;">
+                    Limited
+                </div>
+                <!-- Eye Icon for Quick View -->
+                <div class="product-quick-view position-absolute top-0 end-0 m-2">
+                    <a href="framedbag.html" class="quick-view-btn d-flex align-items-center justify-content-center rounded-circle">
+                        <i class="fa fa-eye fa-sm text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info p-3">
+                <div class="product-category mb-1">
+                    <a href="framedbag.html" class="text-muted small text-decoration-none">Bag</a>
+                </div>
+                <a href="framedbag.html" class="text-decoration-none">
+                    <h5 class="product-title mb-2" style="color: #285151; font-weight: 600;">Framed Bag</h5>
+                </a>
+                
+                <!-- Price Section -->
+                <div class="price-section mb-3">
+                    <del class="me-2 text-muted small">Rp 239.000</del>
+                    <span class="fw-bold fs-5" style="color: #285151;">Rp 199.000</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="product-rating mb-3">
+                    <div class="d-flex justify-content-center">
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <span class="ms-2 text-muted small">(15)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add more products here as needed -->
 
         </div>
             </div>
@@ -401,224 +315,123 @@
 </div>
 <!-- Minimal Shop Page End -->
 
-  <!-- Services Start -->
-<div class="container-fluid px-0" style="background-color: hsl(180, 32%, 59%);">
-    <div class="row g-0">
+ <!-- Footer Links -->
+<div class="row g-5">
+    <!-- Social Media Icons -->
+    <div class="col-12 text-center mt-4">
+        <div class="d-flex justify-content-center gap-3">
 
-        <!-- Item 1 -->
-        <div class="col-6 col-md-4 col-lg-2 border-start border-end wow fadeInUp" data-wow-delay="0.1s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-sync-alt fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Free Return
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">30 days money back guarantee</p>
-                    </div>
-                </div>
+            <!-- Instagram -->
+            <a href="https://instagram.com/uliecraft" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-instagram" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6289516033586" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-whatsapp" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- Google Maps -->
+            <a href="https://maps.google.com/?q=Makassar,Sulawesi+Selatan,Indonesia" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fas fa-map-marked-alt" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@uliecraft" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-tiktok" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:uliecraft@gmail.com"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fas fa-envelope" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+        </div>
+
+
+ <!-- Contact Info Horizontal - Simple Version -->
+<div class="mt-4">
+    <div class="contact-horizontal d-flex justify-content-center align-items-center flex-wrap gap-4 p-4 rounded" 
+         style="background: rgba(255, 255, 255, 0.3); border: 2px solid rgba(40, 81, 81, 0.2);">
+        
+        <!-- Phone -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-phone-alt me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Telepon:</span>
+                <span style="color: #285151;" class="ms-1">+62 895-1603-3586</span>
             </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.2s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fab fa-telegram-plane fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Free Shipping
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">On all orders</p>
-                    </div>
-                </div>
+        <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
+
+        <!-- Location -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-map-marker-alt me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Lokasi:</span>
+                <span style="color: #285151;" class="ms-1">Makassar, Sulawesi Selatan</span>
             </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.3s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-life-ring fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Support 24/7
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Online support all day</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
 
-        <!-- Item 4 -->
-        <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.4s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-credit-card fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Gift Cards
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Available for any purchase</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.5s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-lock fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Secure Payment
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Your security matters</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.6s">
-            <div class="p-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-blog fa-2x" style="color: #285151;"></i>
-                    <div class="ms-3">
-                        <h6 class="text-uppercase mb-1" style="color: #285151; font-weight:600;">
-                            Online Service
-                        </h6>
-                        <p class="mb-0" style="color: #285151;">Easy & fast assistance</p>
-                    </div>
-                </div>
+        <!-- Hours -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-clock me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Jam:</span>
+                <span style="color: #285151;" class="ms-1">09.00 - 17.00 WITA</span>
             </div>
         </div>
 
     </div>
 </div>
-<!-- Services End -->
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-4 rounded mb-5" style="background: rgba(255, 255, 255, .03);">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Address</h4>
-                                <p class="mb-2">123 Street New York.USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fas fa-envelope fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Mail Us</h4>
-                                <p class="mb-2">info@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fa fa-phone-alt fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Telephone</h4>
-                                <p class="mb-2">(+012) 3456 7890</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fab fa-firefox-browser fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Yoursite@ex.com</h4>
-                                <p class="mb-2">(+012) 3456 7890</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h4 class="text-primary mb-4">Newsletter</h4>
-                                <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                                <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-primary mb-4">Customer Service</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Returns</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Order History</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Site Map</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Testimonials</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> My Account</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Unsubscribe Notification</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-primary mb-4">Information</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Delivery infomation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Warranty</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> FAQ</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Seller Login</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-primary mb-4">Extras</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Brands</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Gift Vouchers</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Affiliates</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Wishlist</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Order History</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+<!---Contact Info Horizontal End-->
+<!-- Footer End -->
+
 
         
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        
-                        <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                        <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                </div>
+      <!-- Copyright Start -->
+<div class="container-fluid py-4" style="background:#285151;">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+
+            <!-- Left -->
+            <div class="col-md-6 text-center text-md-start mb-md-0">
+                <span style="color:#D4E7E8;">
+                    <a href="#" class="border-bottom" style="color:#D4E7E8;">
+                        <i class="fas fa-copyright me-2" style="color:#D4E7E8;"></i>
+                        Uliecraft
+                    </a>, All rights reserved.
+                </span>
             </div>
+
+            <!-- Right -->
+            <div class="col-md-6 text-center text-md-end">
+                <span style="color:#D4E7E8;">
+                    Designed By 
+                    <a href="https://instagram.com" class="border-bottom" style="color:#D4E7E8;">
+                        Faa of Gravitiq
+                    </a>
+                </span>
+            </div>
+
         </div>
-        <!-- Copyright End -->
+    </div>
+</div>
+<!-- Copyright End -->
+
 
 
         <!-- Back to Top -->

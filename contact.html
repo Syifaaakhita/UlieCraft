@@ -1,345 +1,426 @@
 <!DOCTYPE html>
-<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>uliecraft - Satu Tas, Satu Cerita</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-   <head>
-        <meta charset="utf-8">
-        <title>uliecraft - Satu Tas, Satu Cerita</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <style>
+        .top-bar {
+            background-color: #285151;
+            border-bottom: 2px solid #ffffff;
+        }
+        .navbar {
+            background-color: #D4E7E8;
+            border-bottom: 5px solid #ffffff;
+        }
+        .nav-link {
+            color: #285151 !important;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link.active {
+            font-weight: 600;
+        }
+    </style>
+</head>
 
-    <body>
+<body>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-<div hidden> 
-<!-- Top Bar -->
-<div class="container-fluid px-3 px-lg-5 d-none d-lg-block" style="background-color: #285151; border-bottom: 2px solid #ffffff;">
-    <div class="row gx-0 align-items-center" style="height: 45px;">
-        <div class="col-12 text-center text-lg-start">
-            <span style="color: #285151;">Carry Your Story, Carry Your Style</span>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
     </div>
-</div>
-</div>
+    <!-- Spinner End -->
 
-<!-- Main Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D4E7E8; border-bottom : 5px solid #ffffff">
+ <!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
     <div class="container-fluid px-3 px-lg-5">
+        <!-- Logo dan Menu Toggle -->
+        <div class="d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand me-4" href="index.html">
+                <img src="img/Ulie2.png" alt="Uliecraft Logo" class="navbar-logo">
+            </a>
 
-        <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
-            <img src="img/Ulie2.png" alt="Uliecraft Logo" style="height: 70px;">
-        </a>
-
-        <!-- Toggler Button (Mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars" style="color: #285151;"></span>
-        </button>
-
-        <!-- Navbar Links -->
+            <!-- Toggler Button (Mobile) -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+ <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="mainNavbar">
-            <!-- Center Menu -->
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+            <!-- Desktop Menu -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-menu">
                 <li class="nav-item">
-                    <a class="nav-link active" href="shop.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Shop</a>
+                    <a class="nav-link nav-link-custom" href="index.html">
+                        <i class="fas fa-shopping-bag me-2 d-none d-sm-inline"></i>
+                        Home
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cheackout.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Checkout</a>
+                    <a class="nav-link nav-link-custom" href="shop.html">
+                        <i class="fas fa-info-circle me-2 d-none d-sm-inline"></i>
+                        Shop
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html" style="color: #285151; font-size: 1.1rem; padding: 0.5rem 1rem;">Contact</a>
+                    <a class="nav-link nav-link-custom active" href="contact.html">
+                        <i class="fas fa-envelope me-2 d-none d-sm-inline"></i>
+                        Contact
+                    </a>
                 </li>
-                <!-- Mobile Dropdown -->
-            <!-- Search Bar & Icons -->
-            <div class="d-flex align-items-center gap-3 flex-wrap">
-                <!-- Search -->
-                <div class="d-flex border rounded-pill" style="border-color: #285151 !important; flex-grow: 1; max-width: 500px;">
-                    <input type="text" class="form-control border-0 rounded-pill py-2 px-3" placeholder="Search Looking For?" style="color: #285151; width: 100%;">
-                    <button type="button" class="btn rounded-pill py-2 px-3" style="background-color: #285151; color: #D4E7E8; border: 0;">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-
-                <!-- Icons -->
-                <div class="d-flex align-items-center gap-2">
-                    <a href="#" class="text-center text-decoration-none" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-random"></i></span>
-                    </a>
-                    <a href="#" class="text-center text-decoration-none" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-heart"></i></span>
-                    </a>
-                    <a href="#" class="text-center text-decoration-none d-flex align-items-center" style="color: #9F9F9F;">
-                        <span class="rounded-circle btn-md-square border" style="border-color:#9F9F9F;"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="ms-2" style="color:#285151;">Rp.0.00</span>
-                    </a>
-                </div>
+            </ul>
             </div>
-
         </div>
     </div>
 </nav>
-<!--Main Navbar End-->
+ <!-- Main Navbar End -->
 
-       <!-- Contact Section -->
-    <section class="contact py-5">
-        <div class="container py-5">
-            <div class="p-5 bg-light rounded">
-                <div class="row g-4">
+ <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                    <div class="col-12 text-center mx-auto" style="max-width: 900px;">
-                        <h4 class="text-primary border-bottom border-primary border-2 d-inline-block pb-2">Get in touch</h4>
-                        <p class="mb-5 fs-5 text-dark">We are here for you! How can we help?</p>
-                    </div>
+    <!-- Contact Section -->
+<section class="contact py-5" style="background-color: #F8F9FA;">
+    <div class="container py-5">
+        <div class="p-5 bg-light rounded">
+            <div class="row g-4">
 
-                    <!-- FORM -->
-                    <div class="col-lg-7">
-                        <h5 class="text-primary">Let's Connect</h5>
-                        <h1 class="display-5 mb-4">Send Your Message</h1>
-
-                        <!-- Alerts -->
-                        <div id="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Success!</strong> Your message has been sent successfully.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        </div>
-
-                        <div id="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Error!</strong> Something went wrong. Please try again.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        </div>
-
-                        <!-- FORM INPUTS -->
-                        <form id="contactForm" class="contact-form-container">
-                            <div class="row g-4">
-
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
-                                        <label for="phone">Your Phone</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="product" required>
-                                            <option value="" selected disabled>Select a Product</option>
-                                            <option value="Totebag Canvas">Totebag Canvas</option>
-                                            <option value="Pouch Handmade">Pouch Handmade</option>
-                                            <option value="Journal Book">Journal Book</option>
-                                            <option value="Craft Accessories">Craft Accessories</option>
-                                            <option value="Gift Hampers">Gift Hampers</option>
-                                        </select>
-                                        <label for="product">Product of Interest</label>
-                                        <div class="invalid-feedback">Please select a product.</div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" id="message" placeholder="Message" style="height: 160px" required></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- MAP -->
-                    <div class="col-lg-5">
-                        <div class="h-100 rounded map-container">
-                            <iframe class="rounded w-100 h-100"
-                                src="https://maps.app.goo.gl/ummm2DKepM1hAGW3A"></iframe>
-                        </div>
-                    </div>
-
-                    <!-- CONTACT ICONS -->
-                    <div class="col-lg-12">
-                        <div class="row g-4 justify-content-center">
-                            <!-- repeat icons -->
-                        </div>
-                    </div>
-
+                <div class="col-12 text-center mx-auto" style="max-width: 900px;">
+                    <h4 class="text-primary border-bottom border-primary border-2 d-inline-block pb-2" style="color: #285151 !important; border-color: #285151 !important;">
+                        Hubungi Kami
+                    </h4>
+                    <p class="mb-5 fs-5 text-dark">Butuh informasi lebih lanjut? Langsung chat via WhatsApp!</p>
                 </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <h5 style="color: #285151;">Mari Terhubung</h5>
+                    <h1 class="display-5 mb-4" style="color: #285151;">Kirim Pesan Custom</h1>
+
+                    <!-- FORM INPUTS -->
+                    <form id="contactForm" class="contact-form-container">
+                        <div class="row g-4">
+
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" required style="border-color: #285151;">
+                                    <label for="name" style="color: #285151;">Nama Lengkap</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Email Anda" required style="border-color: #285151;">
+                                    <label for="email" style="color: #285151;">Email Anda</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Nomor WhatsApp" required style="border-color: #285151;">
+                                    <label for="phone" style="color: #285151;">Nomor WhatsApp</label>
+                                </div>
+                            </div>
+
+                            <!-- Product Selection -->
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="product" required style="border-color: #285151;">
+                                        <option value="" selected disabled>Pilih Produk</option>
+                                        <option value="Framed Pouch">Framed Pouch</option>
+                                        <option value="Canvas Tote Bag">Canvas Tote Bag</option>
+                                        <option value="Re-Cycle Jeans Bag">Re-Cycle Jeans Bag</option>
+                                        <option value="Sling Bag">Sling Bag</option>
+                                        <option value="Framed Bag">Framed Bag</option>
+                                        <option value="Coin Purse">Coin Purse</option>
+                                        <option value="Custom Order">Custom Order</option>
+                                    </select>
+                                    <label for="product" style="color: #285151;">Produk yang Diminati</label>
+                                </div>
+                            </div>
+
+                            <!-- Variant Selection -->
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="variant" style="border-color: #285151;">
+                                        <option value="" selected>Pilih Varian (Opsional)</option>
+                                        <option value="Mint">Mint</option>
+                                        <option value="Pink">Pink</option>
+                                        <option value="Cream">Cream</option>
+                                        <option value="Navy Blue">Navy Blue</option>
+                                        <option value="Black">Black</option>
+                                        <option value="Brown">Brown</option>
+                                    </select>
+                                    <label for="variant" style="color: #285151;">Varian Warna</label>
+                                </div>
+                            </div>
+
+                            <!-- Quantity -->
+                            <div class="col-lg-12 col-xl-6">
+                                <label class="form-label" style="color: #285151; font-weight: 600;">Jumlah:</label>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button type="button" onclick="updateQty(-1)" class="btn btn-outline-secondary" style="border-color: #285151; color: #285151;">-</button>
+                                    <input type="number" id="qty" value="1" min="1" class="form-control text-center" style="width: 80px; border-color: #285151;">
+                                    <button type="button" onclick="updateQty(1)" class="btn btn-outline-secondary" style="border-color: #285151; color: #285151;">+</button>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subjek Pesan" required style="border-color: #285151;">
+                                    <label for="subject" style="color: #285151;">Subjek Pesan</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" placeholder="Pesan Anda" style="height: 120px; border-color: #285151;" required></textarea>
+                                    <label for="message" style="color: #285151;">Pesan Anda</label>
+                                </div>
+                            </div>
+
+                            <!-- Custom Note -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="customNote" placeholder="Catatan Custom (Opsional)" style="height: 100px; border-color: #285151;"></textarea>
+                                    <label for="customNote" style="color: #285151;">Catatan Custom (Opsional)</label>
+                                </div>
+                                <small class="text-muted">Tulis permintaan khusus seperti ukuran, bahan, atau desain custom</small>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="button" onclick="sendToWhatsApp()" class="btn w-100 py-3" style="background: #285151; color: white; font-weight: 600;">
+                                    <i class="fab fa-whatsapp me-2"></i> Kirim via WhatsApp
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-5">
+                    <div class="ps-lg-4">
+                        <h5 style="color: #285151;">Informasi Kontak</h5>
+                        <h1 class="display-5 mb-4" style="color: #285151;">Langsung Chat</h1>
+                        
+                        <div class="contact-info mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" 
+                                     style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fab fa-whatsapp text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 style="color: #285151; margin-bottom: 0.2rem;">WhatsApp</h6>
+                                    <p class="mb-0" style="color: #285151;">+62 895-1603-3586</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" 
+                                     style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 style="color: #285151; margin-bottom: 0.2rem;">Email</h6>
+                                    <p class="mb-0" style="color: #285151;">uliecraft@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" 
+                                     style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 style="color: #285151; margin-bottom: 0.2rem;">Lokasi</h6>
+                                    <p class="mb-0" style="color: #285151;">Makassar, Sulawesi Selatan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" 
+                                     style="width: 50px; height: 50px; background-color: #285151;">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 style="color: #285151; margin-bottom: 0.2rem;">Jam Operasional</h6>
+                                    <p class="mb-0" style="color: #285151;">Senin - Minggu: 09.00 - 17.00 WITA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="quick-actions mt-5">
+                            <h5 style="color: #285151;" class="mb-3">Aksi Cepat</h5>
+                            <div class="d-grid gap-2">
+                                <button type="button" onclick="quickOrder()" class="btn btn-outline-primary py-2" style="border-color: #285151; color: #285151;">
+                                    <i class="fas fa-shopping-cart me-2"></i> Pesan Cepat
+                                </button>
+                                <button type="button" onclick="customOrder()" class="btn btn-outline-primary py-2" style="border-color: #285151; color: #285151;">
+                                    <i class="fas fa-palette me-2"></i> Custom Order
+                                </button>
+                                <button type="button" onclick="bulkOrder()" class="btn btn-outline-primary py-2" style="border-color: #285151; color: #285151;">
+                                    <i class="fas fa-boxes me-2"></i> Pesanan Partai
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
-        <!-- Contact End -->
+    </div>
+</section>
+<!--Contact Section End-->
+  
 
 
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-4 rounded mb-5" style="background: rgba(255, 255, 255, .03);">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Address</h4>
-                                <p class="mb-2">123 Street New York.USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fas fa-envelope fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Mail Us</h4>
-                                <p class="mb-2">info@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fa fa-phone-alt fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Telephone</h4>
-                                <p class="mb-2">(+012) 3456 7890</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="rounded p-4">
-                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
-                                <i class="fab fa-firefox-browser fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white">Yoursite@ex.com</h4>
-                                <p class="mb-2">(+012) 3456 7890</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h4 class="text-primary mb-4">Newsletter</h4>
-                                <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                                <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-primary mb-4">Customer Service</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Returns</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Order History</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Site Map</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Testimonials</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> My Account</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Unsubscribe Notification</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-primary mb-4">Information</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Delivery infomation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Warranty</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> FAQ</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Seller Login</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-primary mb-4">Extras</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Brands</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Gift Vouchers</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Affiliates</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Wishlist</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Order History</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
-                        </div>
-                    </div>
-                </div>
+     
+<!-- Footer Links -->
+<div class="row g-5">
+    <!-- Social Media Icons -->
+    <div class="col-12 text-center mt-4">
+        <div class="d-flex justify-content-center gap-3">
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/uliecraft" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-instagram" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6289516033586" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-whatsapp" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- Google Maps -->
+            <a href="https://maps.google.com/?q=Makassar,Sulawesi+Selatan,Indonesia" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fas fa-map-marked-alt" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@uliecraft" target="_blank"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fab fa-tiktok" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:uliecraft@gmail.com"
+                class="social-icon d-flex align-items-center justify-content-center"
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                <i class="fas fa-envelope" style="color:#285151; font-size:20px;"></i>
+            </a>
+
+        </div>
+
+
+ <!-- Contact Info Horizontal - Simple Version -->
+<div class="mt-4">
+    <div class="contact-horizontal d-flex justify-content-center align-items-center flex-wrap gap-4 p-4 rounded" 
+         style="background: rgba(255, 255, 255, 0.3); border: 2px solid rgba(40, 81, 81, 0.2);">
+        
+        <!-- Phone -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-phone-alt me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Telepon:</span>
+                <span style="color: #285151;" class="ms-1">+62 895-1603-3586</span>
             </div>
         </div>
-        <!-- Footer End -->
+
+        <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
+
+        <!-- Location -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-map-marker-alt me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Lokasi:</span>
+                <span style="color: #285151;" class="ms-1">Makassar, Sulawesi Selatan</span>
+            </div>
+        </div>
+
+        <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
+
+        <!-- Hours -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-clock me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Jam:</span>
+                <span style="color: #285151;" class="ms-1">09.00 - 17.00 WITA</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!---Contact Info Horizontal End-->
+<!-- Footer End -->
+
 
         
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        
-                        <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                        <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                </div>
+      <!-- Copyright Start -->
+<div class="container-fluid py-4" style="background:#285151;">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+
+            <!-- Left -->
+            <div class="col-md-6 text-center text-md-start mb-md-0">
+                <span style="color:#D4E7E8;">
+                    <a href="#" class="border-bottom" style="color:#D4E7E8;">
+                        <i class="fas fa-copyright me-2" style="color:#D4E7E8;"></i>
+                        Uliecraft
+                    </a>, All rights reserved.
+                </span>
             </div>
+
+            <!-- Right -->
+            <div class="col-md-6 text-center text-md-end">
+                <span style="color:#D4E7E8;">
+                    Designed By 
+                    <a href="https://instagram.com" class="border-bottom" style="color:#D4E7E8;">
+                        Faa of Gravitiq
+                    </a>
+                </span>
+            </div>
+
         </div>
-        <!-- Copyright End -->
+    </div>
+</div>
+<!-- Copyright End -->
+
 
 
         <!-- Back to Top -->
@@ -356,5 +437,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     </body>
+
 
 </html>

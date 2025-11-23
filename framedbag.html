@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uliecraft - Product Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .product-image {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #285151;
+        }
+        .btn-wa {
+            background-color: #25d366;
+            color: #fff;
+            font-weight: 600;
+        }
+        .btn-wa:hover {
+            opacity: 0.9;
+            color: #fff;
+        }
+        .section-title {
+            border-bottom: 2px solid #d4e7e8;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PRODUCT DETAIL WRAPPER -->
+<div class="container py-5">
+    <div class="row g-4">
+
+        <!-- IMAGE -->
+        <div class="col-lg-6">
+            <div class="product-image">
+                <img src="img/framedpouch.webp" class="img-fluid w-100" alt="Product Image" />
+            </div>
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="col-lg-6">
+            <h2 class="fw-bold">Framed Pouch</h2>
+            <p class="text-muted">Handmade by Uliecraft</p>
+            <p class="price">Rp 85.000</p>
+
+            <div class="mb-4">
+                <p class="mb-1 fw-semibold">Deskripsi Produk:</p>
+                <p class="text-muted">Framed pouch handmade dari bahan berkualitas, cocok untuk coin, makeup kecil, atau aksesoris.</p>
+            </div>
+
+            <!-- BUTTON WA -->
+            <div class="d-grid gap-3">
+                <a id="orderWA" class="btn btn-wa py-3" target="_blank">
+                    Order via WhatsApp
+                </a>
+
+                <a id="customWA" class="btn btn-outline-dark py-3" target="_blank">
+                    Custom Request via WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DETAILS SECTION -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h4 class="section-title">Detail Tambahan</h4>
+        </div>
+
+        <div class="col-md-4">
+            <p><strong>Bahan:</strong><br>Kanvas Premium</p>
+        </div>
+        <div class="col-md-4">
+            <p><strong>Ukuran:</strong><br>15cm x 10cm</p>
+        </div>
+        <div class="col-md-4">
+            <p><strong>Warna:</strong><br>Colorful Pattern</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Data produk yang dikirimkan ke WhatsApp
+    const product = {
+        name: "Framed Pouch",
+        price: "Rp 85.000",
+        size: "15cm x 10cm",
+        material: "Kanvas Premium",
+    };
+
+    const phoneNumber = "6281234567890"; // GANTI NOMOR WA KAMU
+
+    // Format struk order otomatis
+    const receipt = `*ULIECRAFT ORDER RECEIPT*%0A%0A` +
+                    `*Produk:* ${product.name}%0A` +
+                    `*Harga:* ${product.price}%0A` +
+                    `*Ukuran:* ${product.size}%0A` +
+                    `*Bahan:* ${product.material}%0A%0A` +
+                    `Silakan kirim alamat + metode pembayaran.`;
+
+    document.getElementById("orderWA").href = `https://wa.me/${phoneNumber}?text=${receipt}`;
+
+    const customMsg = `Halo, saya ingin custom produk *${product.name}*. Bisa dibantu?`;
+    document.getElementById("customWA").href = `https://wa.me/${phoneNumber}?text=${customMsg}`;
+</script>
+
+</body>
+</html>

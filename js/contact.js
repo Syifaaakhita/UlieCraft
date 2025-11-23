@@ -64,7 +64,7 @@ Message: ${formData.message}`;
 
     console.log("WhatsApp Notification URL:", whatsappURL);
 
-    // Jika ingin membuka WhatsApp langsung (opsional):
-    // window.open(whatsappURL, "_blank");
+    //Jika ingin membuka WhatsApp langsung (opsional):
+    window.open(whatsappURL, "_blank");
 }
 });
