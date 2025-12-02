@@ -76,7 +76,7 @@
  <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="mainNavbar">
             <!-- Desktop Menu -->
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-menu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-menu">
                 <li class="nav-item">
                     <a class="nav-link nav-link-custom" href="index.html">
                         <i class="fas fa-shopping-bag me-2 d-none d-sm-inline"></i>
@@ -167,8 +167,8 @@
 
                             <!-- Variant Selection -->
                             <div class="col-lg-12 col-xl-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="variant" style="border-color: #285151;">
+                                <div class="form-floating mb-2">
+                                    <select class="form-select" id="variant" onchange="toggleCustomVariant()" style="border-color: #285151;">
                                         <option value="" selected>Pilih Varian (Opsional)</option>
                                         <option value="Mint">Mint</option>
                                         <option value="Pink">Pink</option>
@@ -176,10 +176,28 @@
                                         <option value="Navy Blue">Navy Blue</option>
                                         <option value="Black">Black</option>
                                         <option value="Brown">Brown</option>
+                                        <option value="custom">Isi Sendiri (Custom)</option>
                                     </select>
                                     <label for="variant" style="color: #285151;">Varian Warna</label>
                                 </div>
+
+                                <!-- Input muncul hanya jika pilih custom -->
+                                <div id="customVariantWrapper" class="form-floating" style="display:none;">
+                                    <input type="text" class="form-control" id="customVariant" placeholder="Masukkan varian custom"
+                                        style="border-color:#285151;">
+                                    <label for="customVariant" style="color:#285151;">Tulis Varian Custom</label>
+                                </div>
+
+                                <small class="text-muted">Jika ada warna khusus kosongkan saja</small>
                             </div>
+                            <script>
+                                function toggleCustomVariant() {
+                                    const variant = document.getElementById("variant").value;
+                                    const wrapper = document.getElementById("customVariantWrapper");
+
+                                    wrapper.style.display = (variant === "custom") ? "block" : "none";
+                                }
+                                </script>
 
                             <!-- Quantity -->
                             <div class="col-lg-12 col-xl-6">
@@ -278,11 +296,9 @@
 
                         <!-- Quick Actions -->
                         <div class="quick-actions mt-5">
-                            <h5 style="color: #285151;" class="mb-3">Aksi Cepat</h5>
+                            <h5 style="color: #285151;" class="mb-3">For Fast</h5>
                             <div class="d-grid gap-2">
-                                <button type="button" onclick="quickOrder()" class="btn btn-outline-primary py-2" style="border-color: #285151; color: #285151;">
-                                    <i class="fas fa-shopping-cart me-2"></i> Pesan Cepat
-                                </button>
+
                                 <button type="button" onclick="customOrder()" class="btn btn-outline-primary py-2" style="border-color: #285151; color: #285151;">
                                     <i class="fas fa-palette me-2"></i> Custom Order
                                 </button>
@@ -306,72 +322,78 @@
      
 <!-- Footer Links -->
 <div class="row g-5">
-    <!-- Social Media Icons -->
     <div class="col-12 text-center mt-4">
         <div class="d-flex justify-content-center gap-3">
 
             <!-- Instagram -->
-            <a href="https://instagram.com/uliecraft" target="_blank"
+            <a href="https://instagram.com/uliecraft_" target="_blank"
                 class="social-icon d-flex align-items-center justify-content-center"
-                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: 0.3s;">
                 <i class="fab fa-instagram" style="color:#285151; font-size:20px;"></i>
             </a>
 
             <!-- WhatsApp -->
             <a href="https://wa.me/6289516033586" target="_blank"
                 class="social-icon d-flex align-items-center justify-content-center"
-                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: 0.3s;">
                 <i class="fab fa-whatsapp" style="color:#285151; font-size:20px;"></i>
             </a>
 
             <!-- Google Maps -->
-            <a href="https://maps.google.com/?q=Makassar,Sulawesi+Selatan,Indonesia" target="_blank"
+            <a href="https://maps.app.goo.gl/n7AsW2TXwtaoevS2A" target="_blank"
                 class="social-icon d-flex align-items-center justify-content-center"
-                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: 0.3s;">
                 <i class="fas fa-map-marked-alt" style="color:#285151; font-size:20px;"></i>
-            </a>
-
-            <!-- TikTok -->
-            <a href="https://tiktok.com/@uliecraft" target="_blank"
-                class="social-icon d-flex align-items-center justify-content-center"
-                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
-                <i class="fab fa-tiktok" style="color:#285151; font-size:20px;"></i>
             </a>
 
             <!-- Email -->
             <a href="mailto:uliecraft@gmail.com"
                 class="social-icon d-flex align-items-center justify-content-center"
-                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
+                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: 0.3s;">
                 <i class="fas fa-envelope" style="color:#285151; font-size:20px;"></i>
             </a>
 
         </div>
-
-
- <!-- Contact Info Horizontal - Simple Version -->
+    </div>
+</div>
+<!-- Contact Info Horizontal -->
 <div class="mt-4">
-    <div class="contact-horizontal d-flex justify-content-center align-items-center flex-wrap gap-4 p-4 rounded" 
-         style="background: rgba(255, 255, 255, 0.3); border: 2px solid rgba(40, 81, 81, 0.2);">
-        
+    <div class="contact-horizontal d-flex justify-content-center align-items-center flex-wrap gap-4 p-4 rounded"
+        style="background: rgba(255,255,255,0.3); border: 2px solid rgba(40,81,81,0.2);">
+
         <!-- Phone -->
         <div class="contact-line-item d-flex align-items-center">
             <i class="fas fa-phone-alt me-2" style="color: #285151;"></i>
             <div>
                 <span class="fw-bold" style="color: #285151;">Telepon:</span>
-                <span style="color: #285151;" class="ms-1">+62 895-1603-3586</span>
+                <span class="ms-1" style="color: #285151;">+62 895-1603-3586</span>
             </div>
         </div>
 
-        <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
+        <div class="vertical-divider" style="width:1px; height:30px; background-color: rgba(40,81,81,0.3);"></div>
 
         <!-- Location -->
         <div class="contact-line-item d-flex align-items-center">
             <i class="fas fa-map-marker-alt me-2" style="color: #285151;"></i>
             <div>
                 <span class="fw-bold" style="color: #285151;">Lokasi:</span>
-                <span style="color: #285151;" class="ms-1">Makassar, Sulawesi Selatan</span>
+                <span class="ms-1" style="color: #285151;">Makassar, Sulawesi Selatan</span>
             </div>
         </div>
+
+        <div class="vertical-divider" style="width:1px; height:30px; background-color: rgba(40,81,81,0.3);"></div>
+
+        <!-- Email -->
+        <div class="contact-line-item d-flex align-items-center">
+            <i class="fas fa-envelope me-2" style="color: #285151;"></i>
+            <div>
+                <span class="fw-bold" style="color: #285151;">Email:</span>
+                <span class="ms-1" style="color: #285151;">uliecraft@gmail.com</span>
+            </div>
+        </div>
+
+    </div>
+</div>
 
         <div class="vertical-divider" style="width: 1px; height: 30px; background-color: rgba(40, 81, 81, 0.3);"></div>
 
@@ -388,6 +410,60 @@
 </div>
 <!---Contact Info Horizontal End-->
 <!-- Footer End -->
+
+<script>
+    function updateQty(value) {
+        let qty = document.getElementById("qty");
+        let current = parseInt(qty.value);
+        if (current + value >= 1) qty.value = current + value;
+    }
+
+    function sendToWhatsApp() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const product = document.getElementById("product").value;
+        const variant = document.getElementById("variant").value;
+        const qty = document.getElementById("qty").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+        const customNote = document.getElementById("customNote").value;
+
+        const text = 
+`Halo Uliecraft! Saya ingin mengirim pesan melalui form:
+        
+Nama: ${name}
+Email: ${email}
+WhatsApp: ${phone}
+
+Produk: ${product}
+Varian: ${variant}
+Jumlah: ${qty}
+
+Subjek: ${subject}
+Pesan: ${message}
+
+Catatan Custom:
+${customNote}`;
+
+        const encoded = encodeURIComponent(text);
+        const whatsappURL = `https://wa.me/6289516033586?text=${encoded}`;
+
+        window.open(whatsappURL, "_blank");
+    }
+
+    function quickOrder() {
+        window.open("https://wa.me/6289516033586?text=Halo%20Uliecraft!%20Saya%20ingin%20pesan%20cepat.", "_blank");
+    }
+
+    function customOrder() {
+        window.open("https://wa.me/6289516033586?text=Halo%20Uliecraft!%20Saya%20ingin%20buat%20custom%20order.", "_blank");
+    }
+
+    function bulkOrder() {
+        window.open("https://wa.me/6289516033586?text=Halo%20Uliecraft!%20Saya%20ingin%20pesanan%20partai%20besar.", "_blank");
+    }
+</script>
 
 
         

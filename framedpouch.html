@@ -77,7 +77,7 @@
  <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="mainNavbar">
             <!-- Desktop Menu -->
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-menu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-menu">
                 <li class="nav-item">
                     <a class="nav-link nav-link-custom" href="index.html">
                         <i class="fas fa-shopping-bag me-2 d-none d-sm-inline"></i>
@@ -190,65 +190,70 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // FIX SPINNER
-        window.addEventListener("load", () => {
-            const spinner = document.getElementById("spinner");
-            if (spinner) spinner.classList.remove("show");
-        });
+   <script>
+    // PRODUCT DATA
+    const product = {
+        name: "Slingbag",
+        price: 154900,
+        size: "15cm x 10cm",
+        material: "Linen Premium"
+    };
 
-        // PRODUCT DATA
-        const product = {
-            name: "Framed Pouch",
-            price: 85000,
-            size: "15cm x 10cm",
-            material: "Kanvas Premium"
-        };
+    const phoneNumber = "6289516033586";
 
-        const phoneNumber = "6289516033586";
+    // Update Qty
+    function updateQty(val) {
+        const qtyInput = document.getElementById("qty");
+        let qty = parseInt(qtyInput.value) || 1;
+        qty = Math.max(1, qty + val);
+        qtyInput.value = qty;
+        generateWhatsAppMessage();
+    }
 
-        function updateQty(val) {
-            const qtyInput = document.getElementById("qty");
-            let qty = parseInt(qtyInput.value) || 1;
-            qty = Math.max(1, qty + val);
-            qtyInput.value = qty;
-            updateWhatsAppLinks();
-        }
+    // Fungsi utama membuat pesan WA
+    function generateWhatsAppMessage() {
+        const variant = document.getElementById("variant").value;
+        const qty = parseInt(document.getElementById("qty").value) || 1;
+        const customNote = document.getElementById("customNote").value.trim();
+        const total = qty * product.price;
 
-        function updateWhatsAppLinks() {
-            const variant = document.getElementById("variant").value;
-            const qty = parseInt(document.getElementById("qty").value);
-            const customNote = document.getElementById("customNote").value;
-            const total = qty * product.price;
+        // Format pesan order lengkap
+        const message =
+            "*ULIECRAFT ORDER RECEIPT*\n\n" +
+            `*Produk:* ${product.name}\n` +
+            `*Varian:* ${variant}\n` +
+            `*Jumlah:* ${qty}\n` +
+            `*Harga Satuan:* Rp ${product.price.toLocaleString("id-ID")}\n` +
+            `*Total Harga:* Rp ${total.toLocaleString("id-ID")}\n` +
+            `*Ukuran:* ${product.size}\n` +
+            `*Bahan:* ${product.material}\n\n` +
+            `*Catatan Custom:* ${customNote !== "" ? customNote : "-"}\n\n` +
+            "Silakan kirim alamat + metode pembayaran.";
 
-            const receipt =
-                `*ULIECRAFT ORDER RECEIPT*%0A%0A` +
-                `*Produk:* ${product.name}%0A` +
-                `*Varian:* ${variant}%0A` +
-                `*Jumlah:* ${qty}%0A` +
-                `*Harga Satuan:* Rp ${product.price.toLocaleString('id-ID')}%0A` +
-                `*Total Harga:* Rp ${total.toLocaleString('id-ID')}%0A` +
-                `*Ukuran:* ${product.size}%0A` +
-                `*Bahan:* ${product.material}%0A%0A` +
-                `Silakan kirim alamat + metode pembayaran.`;
+        // Format pesan khusus custom
+        const customMessage =
+            "Halo Uliecraft!\n\n" +
+            `Saya ingin custom produk *${product.name}*:\n` +
+            `- Varian: ${variant}\n` +
+            `- Jumlah: ${qty}\n` +
+            `- Catatan Custom: ${customNote || "-"}\n\n` +
+            "Mohon bantuannya.";
 
-            document.getElementById("orderWA").href =
-                `https://wa.me/${phoneNumber}?text=${receipt}`;
+        // Set link WhatsApp
+        document.getElementById("orderWA").href =
+            "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
-            const customMsg =
-                `Halo Uliecraft!%0A%0A` +
-                `Saya ingin custom produk *${product.name}*:%0A` +
-                `- Varian: ${variant}%0A` +
-                `- Jumlah: ${qty}%0A` +
-                `- Catatan Custom: ${customNote || '-'}%0A%0A` +
-                `Mohon bantuannya.`;
+        document.getElementById("customWA").href =
+            "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(customMessage);
+    }
 
-            document.getElementById("customWA").href =
-                `https://wa.me/${phoneNumber}?text=${customMsg}`;
-        }
+    // Update otomatis saat halaman dibuka
+    document.addEventListener("DOMContentLoaded", generateWhatsAppMessage);
 
-        document.addEventListener("DOMContentLoaded", updateWhatsAppLinks);
-    </script>
+    // Update setiap input berubah
+    document.addEventListener("input", generateWhatsAppMessage);
+</script>
+
 <!-- Footer Links -->
 <div class="row g-5">
     <!-- Social Media Icons -->
@@ -256,7 +261,7 @@
         <div class="d-flex justify-content-center gap-3">
 
             <!-- Instagram -->
-            <a href="https://instagram.com/uliecraft" target="_blank"
+            <a href="https://instagram.com/uliecraft_" target="_blank"
                 class="social-icon d-flex align-items-center justify-content-center"
                 style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
                 <i class="fab fa-instagram" style="color:#285151; font-size:20px;"></i>
@@ -270,28 +275,21 @@
             </a>
 
             <!-- Google Maps -->
-            <a href="https://maps.google.com/?q=Makassar,Sulawesi+Selatan,Indonesia" target="_blank"
+            <a href="https://maps.app.goo.gl/n7AsW2TXwtaoevS2A" target="_blank"
                 class="social-icon d-flex align-items-center justify-content-center"
                 style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
                 <i class="fas fa-map-marked-alt" style="color:#285151; font-size:20px;"></i>
             </a>
 
-            <!-- TikTok -->
-            <a href="https://tiktok.com/@uliecraft" target="_blank"
-                class="social-icon d-flex align-items-center justify-content-center"
-                style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
-                <i class="fab fa-tiktok" style="color:#285151; font-size:20px;"></i>
-            </a>
-
             <!-- Email -->
-            <a href="mailto:uliecraft@gmail.com"
+            <a href="mailto:nadiasalma0403@gmail.com"
                 class="social-icon d-flex align-items-center justify-content-center"
                 style="width:45px; height:45px; background:#D4E7E8; border-radius:50%; text-decoration: none; transition: all 0.3s ease;">
                 <i class="fas fa-envelope" style="color:#285151; font-size:20px;"></i>
             </a>
 
         </div>
-
+<!--End Footer Links-->
 
  <!-- Contact Info Horizontal - Simple Version -->
 <div class="mt-4">
